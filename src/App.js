@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import HeroSection from './Components/Hero'
+import Vision from "./Components/Vision";
+import ParallaxGarden from "./Components/ParallaxGarden"
+import "./App.css";
+import TestTransition from "./Components/CatalystSection";
+// import Features from "./Components/Features";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeroSection />
+      <TestTransition />
+      <Vision />
+      {/* <Features /> */}
+      <ParallaxGarden />
     </div>
   );
 }
