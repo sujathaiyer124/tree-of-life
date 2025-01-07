@@ -113,7 +113,17 @@ const CatalystSection = () => {
                             initial={{ opacity: 0, scale: 0 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 5, delay: i * 3 + 2 }}
-                            style={{ width: '150px', height: '150px' }}
+                            style={{
+                                width: '150px',
+                                height: '150px',
+                                WebkitMaskImage: `url(${item.flowerImage})`, 
+                                WebkitMaskSize: 'cover',                    
+                                WebkitMaskRepeat: 'no-repeat',              
+                                maskImage: `url(${item.flowerImage})`,     
+                                maskSize: 'cover',                         
+                                maskRepeat: 'no-repeat',                   
+                                backgroundColor: 'transparent',  
+                            }}
                         />
                     </motion.div>
                 ))}
@@ -147,7 +157,45 @@ const CatalystSection = () => {
                     </motion.div>
                 ))}
             </div>
- 
+            <style jsx>{`
+                @media (max-width: 768px) {
+                    .foreground-text {
+                        font-size: 28px;
+                    }
+                    .bullet-points {
+                        font-size: 24px;
+                    }
+                }
+
+                @media (max-width: 600px) {
+                    .foreground-text {
+                        font-size:24px;
+                    }
+                    .bullet-points {
+                        font-size:20px;
+                    }
+                }
+
+                @media (max-width: 400px) {
+                    .foreground-text {
+                        font-size: 20px;
+                    }
+                    .bullet-points {
+                        font-size: 18px;
+                    }
+                }
+
+                @media (max-width: 300px) {
+                    .foreground-text {
+                        font-size: 18px;
+                    }
+                    .bullet-points {
+                        font-size: 10px;
+                    }
+                }
+            `}
+            </style>
+        
                 {/* Problem-to-Solution Transition: Two Panels */}
                 <div
                 className="transition-section"

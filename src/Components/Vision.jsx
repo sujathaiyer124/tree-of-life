@@ -46,6 +46,73 @@ const VisionTree = () => {
 
   return (
     <div style={styles.container}>
+       <style>
+        {`
+          @media (max-width: 768px) {
+            svg {
+              width: 90%;
+              height: auto;
+            }
+            text {
+              font-size: 20px;
+            }
+            circle {
+              r: 8;
+            }
+            p {
+              font-size: 18px;
+            }
+          }
+
+          @media (max-width: 600px) {
+            svg {
+              width: 80%;
+              height: auto;
+            }
+            text {
+              font-size: 18px;
+            }
+            circle {
+              r: 7;
+            }
+            p {
+              font-size: 16px;
+            }
+          }
+
+          @media (max-width: 400px) {
+            svg {
+              width: 70%;
+              height: auto;
+            }
+            text {
+              font-size: 16px;
+            }
+            circle {
+              r: 6;
+            }
+            p {
+              font-size: 14px;
+            }
+          }
+
+          @media (max-width: 300px) {
+            svg {
+              width: 60%;
+              height: auto;
+            }
+            text {
+              font-size: 14px;
+            }
+            circle {
+              r: 5;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+        `}
+      </style>
       <svg viewBox="0 0 800 600" width="100%" height="600" style={{ backgroundColor: '#D8F3DC' }}>
         {/* Tree Trunk */}
         <path

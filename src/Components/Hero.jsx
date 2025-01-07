@@ -6,12 +6,40 @@ import backgroundImage from "../img4.jpg"; // Replace with your background image
 // Styled Components
 const HeroContainer = styled.div`
   position: relative;
+  width:100vw;
   height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+ background-color: #5f967c;
+  @media (max-width: 768px) {
+    height: 90vh;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  @media (max-width: 600px) {
+    height: 85vh;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  @media (max-width: 400px) {
+    height: 80vh;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  @media (max-width: 300px) {
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+  }
+ 
 `;
 
 const BackgroundImage = styled(motion.div)`
